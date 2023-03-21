@@ -17,12 +17,12 @@ import java.util.List;
 
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IAlquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IClientes;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IFuenteDatos;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IVehiculos;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Vehiculos;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Vehiculos;
 import org.junit.jupiter.api.BeforeAll;
@@ -51,7 +51,7 @@ public class ModeloTest {
 	private static IAlquileres alquileres;
 
 	private static Cliente cliente;
-	private static Turismo turismo;
+	private static Vehiculos turismo;
 	private static Alquiler alquiler;
 	private static LocalDate hoy;
 	private static LocalDate ayer;
@@ -71,7 +71,7 @@ public class ModeloTest {
 		when(cliente.getTelefono()).thenReturn("950112233");
 		turismo = mock();
 		mockConstruction(Vehiculos.class);
-		mockConstruction(Turismo.class);
+		mockConstruction(Vehiculos.class);
 		when(turismo.getMarca()).thenReturn("Seat");
 		when(turismo.getModelo()).thenReturn("León");
 		when(turismo.getMatricula()).thenReturn("1234BCD");

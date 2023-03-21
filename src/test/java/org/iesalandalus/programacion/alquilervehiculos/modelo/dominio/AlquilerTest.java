@@ -14,6 +14,7 @@ import java.time.LocalDate;
 
 import javax.naming.OperationNotSupportedException;
 
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Vehiculos;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +32,7 @@ public class AlquilerTest {
 	private static final String MENSAJE_ERROR_ALQUILER_NULO = "ERROR: No es posible copiar un alquiler nulo.";
 
 	private static Cliente cliente;
-	private static Turismo turismo;
+	private static Vehiculos turismo;
 	private static LocalDate hoy;
 	private static LocalDate ayer;
 	private static LocalDate manana;
